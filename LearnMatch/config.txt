@@ -1,0 +1,40 @@
+# quiet mode disables all visual output (for experiments).
+quietMode                  = 0
+
+# RNG seed
+seed                       = 0
+
+# run on a video sequence with ground truth. 
+# if useVideo = 0 a webcam will be used.
+useVideo                   = 1
+# path to the video sequence to use (ignored if useVideo = 0)
+videoPath                  = D:/data/learnmatch/paper
+
+# enable logging of results
+doLog                      = 0
+# path to logging file (ignored if doLog = 0)
+logPath                    = result.txt
+
+# number of keypoints used to define a model
+maxModelKeypoints          = 100
+
+# maximum number of keypoints detected in each frame
+maxDetectKeypoints         = 1000
+
+# number of iterations of PROSAC each frame
+prosacIts                  = 512
+
+# enable online learning?
+enableLearning             = 1
+# SVM learning parameters (see paper for details)
+svmLambda                  = 0.1
+svmNu                      = 1.0
+# loss function to use for structured learning
+# choices: (numInliers, hamming, homography, none)
+lossFunction               = numInliers
+
+# enable binary approximation of weight vector?
+enableBinaryWeightVector   = 1
+# number of binary bases used in approximation
+svmBinaryComponents        = 2
+
