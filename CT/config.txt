@@ -1,0 +1,4 @@
+directory = .\data
+
+%bb = x y width height the following is for david sequence
+bb = 120 55 75 95
