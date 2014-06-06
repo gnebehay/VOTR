@@ -1,0 +1,43 @@
+# quiet mode disables all visual output (for experiments).
+quietMode = 0
+
+# debug mode enables additional drawing and visualization.
+debugMode = 1
+
+# base path for video sequences.
+sequenceBasePath = sequences
+
+# path for output results file.
+# comment this out to disable output.
+#resultsPath = log.txt
+
+# video sequence to run the tracker on.
+# comment this out to use webcam.
+sequenceName = girl
+
+# frame size for use during tracking.
+# the input image will be scaled to this size.
+frameWidth = 320
+frameHeight = 240
+
+# seed for random number generator.
+seed = 0
+
+# tracker search radius in pixels.
+searchRadius = 30
+
+# SVM regularization parameter.
+svmC = 100.0
+# SVM budget size (0 = no budget).
+svmBudgetSize = 100
+
+# image features to use.
+# format is: feature kernel [kernel-params]
+# where:
+#   feature = haar/raw/histogram
+#   kernel = gaussian/linear/intersection/chi2
+#   for kernel=gaussian, kernel-params is sigma
+# multiple features can be specified and will be combined
+feature = haar gaussian 0.2
+#feature = raw gaussian 0.1
+#feature = histogram intersection
