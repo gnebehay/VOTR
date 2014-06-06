@@ -1,0 +1,7 @@
+F:\\amita\\data\\face_sequence\\
+1
+890
+75 120 220 235
+7
+16
+3
