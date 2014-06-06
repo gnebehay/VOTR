@@ -1,0 +1,57 @@
+-------------------------------------------------------------------------------
+  TERMS OF USAGE / LICENSE
+-------------------------------------------------------------------------------
+
+                               COMMERCIAL USAGE
+
+  It is not allowed to use any content of this package for any commercial use or
+  any advertisement for upcoming commercial products. If you want to use any 
+  content for such a purpose please contact
+    Horst Bischof <bischof(at)icg.tugraz.at>.
+  
+
+                  PERSONAL, NON-COMMERCIAL or ACADEMIC USAGE
+
+  For personal, non-commercial or academic use, this software is licensed under
+  the following terms.
+
+  Copyright (c) 2011, Institute for Computer Graphics and Vision (ICG)
+  All rights reserved.
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions are met:
+    * Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above copyright
+      notice, this list of conditions and the following disclaimer in the
+      documentation and/or other materials provided with the distribution.
+    * Neither the name of the the Institute for Computer Graphics and Vision
+      (ICG) nor the names of its contributors may be used to endorse or promote
+      products derived from this software without specific prior written
+      permission.
+
+  If you use this package for a scientific publication, please cite the
+  following paper.
+
+  @INPROCEEDINGS{godec11HoughTracking,
+    author = {Martin Godec and Peter M. Roth and Horst Bischof},
+    title = {Hough-based Tracking of Non-rigid Objects},
+    booktitle = {Proc. Int. Conf. on Computer Vision},
+    year = {2011}
+  }
+
+  If you have any further technical suggestions or questions please contact
+    Martin Godec: <godec(at)icg.tugraz.at>
+
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE INSITUTE FOR COMPUTER GRAPHICS AND VISION
+(ICG) BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF
+THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
