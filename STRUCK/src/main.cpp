@@ -78,26 +78,27 @@ int main(int argc, char* argv[])
 	if (challengeMode) {
 		//load region, images and prepare for output
 		Mat frameOrig;
-		Mat frame_scaled;
 		Mat frame;
 		VOT vot_io("region.txt", "images.txt", "output.txt");
 		vot_io.getNextImage(frameOrig);
-		cvtColor(frame_scaled, frame, CV_RGB2GRAY);
+		resize(frameOrig, frame, Size(conf.frameWidth, conf.frameHeight));
 		cv::Rect initPos = vot_io.getInitRectangle();
 		vot_io.outputBoundingBox(initPos);
-		FloatRect initBB_vot = IntRect(initPos.x*scaleW_vot, initPos.y*scaleH_vot, initPos.width*scaleW_vot, initPos.height*scaleH_vot);
+		float scaleW = (float)conf.frameWidth/frameOrig.cols;
+		float scaleH = (float)conf.frameHeight/frameOrig.rows;
+
+		FloatRect initBB_vot = FloatRect(initPos.x*scaleW, initPos.y*scaleH, initPos.width*scaleW, initPos.height*scaleH);
 		tracker.Initialise(frame, initBB_vot);
 
 		while (vot_io.getNextImage(frameOrig) == 1){
-			resize(frameOrig, frame_scaled, Size(conf.frameWidth, conf.frameHeight));
-			cvtColor(frame_scaled, frame, CV_RGB2GRAY);
+			resize(frameOrig, frame, Size(conf.frameWidth, conf.frameHeight));
 			
 			tracker.Track(frame);
 			const FloatRect& bb = tracker.GetBB();
-			float x = bb.XMin()/scaleW_vot;
-			float y = bb.YMin()/scaleH_vot;
-			float w = bb.Width()/scaleW_vot;
-			float h = bb.Height()/scaleH_vot;
+			float x = bb.XMin()/scaleW;
+			float y = bb.YMin()/scaleH;
+			float w = bb.Width()/scaleW;
+			float h = bb.Height()/scaleH;
 
 			cv::Rect output = cv::Rect(x,y,w,h);
 
