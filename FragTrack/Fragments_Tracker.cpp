@@ -895,7 +895,7 @@ void Fragments_Tracker::compute_all_patch_votes(vector< vector<double>* >& patch
 void Fragments_Tracker::Combine_Vote_Maps_Median(vector< CvMat* >& vote_maps, CvMat* V)
 {
 	int M = (vote_maps[0])->height;
-	int N = (vote_maps[0])->height;
+	int N = (vote_maps[0])->width;
 
 	int Z = vote_maps.size();
 	
