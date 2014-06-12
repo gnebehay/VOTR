@@ -20,7 +20,10 @@ project (HoughTracker)
 	FIND_PACKAGE( OpenCV REQUIRED )
 
 
-	SET( CMAKE_BUILD_TYPE Release ) 					# set to [Release|Debug] to switch optimization flags
+    if(NOT CMAKE_BUILD_TYPE)
+        set(CMAKE_BUILD_TYPE Release CACHE STRING "Build type" FORCE)
+    endif()
+
 	SET( BOOST_LIB /usr/lib ) 							# set Boost library dir (default: /usr/lib)
 	SET( BOOST_INCLUDE /usr/include/boost ) 			# set Boost include dir (default: /usr/include)
 

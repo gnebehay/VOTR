@@ -4,7 +4,9 @@ cmake_minimum_required(VERSION 2.6)
 
 find_package(OpenCV REQUIRED)
 
-set(CMAKE_BUILD_TYPE Release)
+if(NOT CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE Release CACHE STRING "Build type" FORCE)
+endif()
 
 INCLUDE_DIRECTORIES ( src/GraphUtils /usr/include/eigen2 ${OpenCV_INCLUDE_DIRS})
 
