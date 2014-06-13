@@ -1,3 +1,12 @@
+TLD: Tracking-Learning-Detection
+-------------------------------------------------------------------------------
+
+TLD is part of the [Visual Object Tracking Repository](https://github.com/gnebehay/VOTR),
+which aims at providing a central repository for state-of-the-art tracking algorithms that are freely available.
+The source code for this tracker was obtained from its [GitHub repository](https://github.com/zk00006/OpenTLD)
+and extended by a challenge mode.
+The following description was copied literally from the original author.
+
 TLD 1.0 (Predator)
 ----------------------------------------------------------------------------
 
