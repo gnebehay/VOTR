@@ -10,5 +10,6 @@ Currently, the following trackers are contained in this repository:
 * [FragTrack](https://www.github.com/gnebehay/FragTrack)
 * [HoughTrack](https://www.github.com/gnebehay/HoughTrack)
 * [LearnMatch](https://www.github.com/gnebehay/LearnMatch)
+* [SCM](https://www.github.com/gnebehay/SCM)
 * [STRUCK](https://www.github.com/gnebehay/STRUCK)
 * [TLD](https://www.github.com/gnebehay/TLD)
