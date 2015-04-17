@@ -27,7 +27,7 @@ features employed in the MOSSE tracker with a pixel-dense representation of HOG-
 [1] D. S. Bolme, J. R. Beveridge, B. A. Draper, and Y. M. Lui. Visual object tracking using adaptive correlation filters. In CVPR,
 2010.
 
-[2] M. Danelljan, G. H ̈ager, F. Shahbaz Khan, and M. Felsberg. Accurate scale estimation for robust visual tracking. In Proceedings
+[2] M. Danelljan, G. Häger, F. Shahbaz Khan, and M. Felsberg. Accurate scale estimation for robust visual tracking. In Proceedings
 of the British Machine Vision Conference (BMVC), 2014.
 
 README
