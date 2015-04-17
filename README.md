@@ -8,6 +8,27 @@ A minor adaption was made by using MATLAB's imresize() function
 instead of a custom mex file to increase portability.
 The following description was copied literally from the original author.
 
+ABSTRACT
+----------------------------------------------------------------------------
+
+The Discriminative Scale Space Tracker (DSST), proposed in [2], extends the Minimum Output Sum of Squared
+Errors (MOSSE) tracker [1] with robust scale estimation. The MOSSE tracker works by training a discriminative
+correlation filter on a set of observed sample grayscale patches. This correlation filter is then applied to estimate the
+target translation in the next frame. The DSST additionally learns a one-dimensional discriminative scale filter, that
+is used to estimate the target size. The scale filter is trained by extracting several sample patches at different scales
+around the current target position in the image. Each sample is represented by a fixed-length feature vector based on
+HOG. These samples are used to learn a multi-channel one-dimensional discriminative filter for scale estimation. This
+scale filter is generic and can be combined with any tracker that is limited to only estimating the target translation.
+Given a new image, the DSST first applies a translation filter to obtain the most probable target location. The scale
+filter is then applied at this location to estimate the target size. The tracking model is then updated with the new
+information information of the target and background appearance. For the translation filter, we combine the intensity
+features employed in the MOSSE tracker with a pixel-dense representation of HOG-features.
+
+[1] D. S. Bolme, J. R. Beveridge, B. A. Draper, and Y. M. Lui. Visual object tracking using adaptive correlation filters. In CVPR,
+2010.
+[2] M. Danelljan, G. H ̈ager, F. Shahbaz Khan, and M. Felsberg. Accurate scale estimation for robust visual tracking. In Proceedings
+of the British Machine Vision Conference (BMVC), 2014.
+
 README
 ----------------------------------------------------------------------------
 
