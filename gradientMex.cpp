@@ -1,7 +1,6 @@
 /*******************************************************************************
-* Piotr's Image&Video Toolbox      Version 3.24
-* Copyright 2013 Piotr Dollar & Ron Appel.  [pdollar-at-caltech.edu]
-* Please email me if you find bugs, or have suggestions or questions!
+* Piotr's Computer Vision Matlab Toolbox      Version 3.30
+* Copyright 2014 Piotr Dollar & Ron Appel.  [pdollar-at-gmail.com]
 * Licensed under the Simplified BSD License [see external/bsd.txt]
 *******************************************************************************/
 #include "wrappers.hpp"
@@ -104,8 +103,8 @@ void gradMagNorm( float *M, float *S, int h, int w, float norm ) {
   __m128 *_M, *_S, _norm; int i=0, n=h*w, n4=n/4;
   _S = (__m128*) S; _M = (__m128*) M; _norm = SET(norm);
   bool sse = !(size_t(M)&15) && !(size_t(S)&15);
-  if(sse) { for(; i<n4; i++) *_M++=MUL(*_M,RCP(ADD(*_S++,_norm))); i*=4; }
-  for(; i<n; i++) M[i] /= (S[i] + norm);
+  if(sse) for(; i<n4; i++) { *_M=MUL(*_M,RCP(ADD(*_S++,_norm))); _M++; }
+  if(sse) i*=4; for(; i<n; i++) M[i] /= (S[i] + norm);
 }
 
 // helper for gradHist, quantize O and M into O0, O1 and M0, M1 (uses sse)
@@ -132,12 +131,12 @@ void gradQuantize( float *O, float *M, int *O0, int *O1, float *M0, float *M1,
     *_M0++=MUL(LDu(M[i]),_norm); *_M1++=SET(0.f); *_O1++=SET(0);
   }
   // compute trailing locations without sse
-  if( interpolate ) for( i; i<n; i++ ) {
+  if( interpolate ) for(; i<n; i++ ) {
     o=O[i]*oMult; o0=(int) o; od=o-o0;
     o0*=nb; if(o0>=oMax) o0=0; O0[i]=o0;
     o1=o0+nb; if(o1==oMax) o1=0; O1[i]=o1;
     m=M[i]*norm; M1[i]=od*m; M0[i]=m-M1[i];
-  } else for( i; i<n; i++ ) {
+  } else for(; i<n; i++ ) {
     o=O[i]*oMult; o0=(int) (o+.5f);
     o0*=nb; if(o0>=oMax) o0=0; O0[i]=o0;
     M0[i]=M[i]*norm; M1[i]=0; O1[i]=0;
@@ -150,7 +149,7 @@ void gradHist( float *M, float *O, float *H, int h, int w,
 {
   const int hb=h/bin, wb=w/bin, h0=hb*bin, w0=wb*bin, nb=wb*hb;
   const float s=(float)bin, sInv=1/s, sInv2=1/s/s;
-  float *H0, *H1, *M0, *M1; int x, y; int *O0, *O1;
+  float *H0, *H1, *M0, *M1; int x, y; int *O0, *O1; float xb, init;
   O0=(int*)alMalloc(h*sizeof(int),16); M0=(float*) alMalloc(h*sizeof(float),16);
   O1=(int*)alMalloc(h*sizeof(int),16); M1=(float*) alMalloc(h*sizeof(float),16);
   // main loop
@@ -182,7 +181,7 @@ void gradHist( float *M, float *O, float *H, int h, int w,
 
     } else {
       // interpolate using trilinear interpolation
-      float ms[4], xyd, xb, yb, xd, yd, init; __m128 _m, _m0, _m1;
+      float ms[4], xyd, yb, xd, yd; __m128 _m, _m0, _m1;
       bool hasLf, hasRt; int xb0, yb0;
       if( x==0 ) { init=(0+.5f)*sInv-0.5f; xb=init; }
       hasLf = xb>=0; xb0 = hasLf?(int)xb:-1; hasRt = xb0 < wb-1;
