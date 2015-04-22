@@ -15,3 +15,4 @@ Currently, the following trackers are contained in this repository:
 * [SIR-PF](https://www.github.com/gnebehay/SIR-PF)
 * [STRUCK](https://www.github.com/gnebehay/STRUCK)
 * [TLD](https://www.github.com/gnebehay/TLD)
+* [qwsEDFT](https://www.github.com/gnebehay/qwsEDFT)
