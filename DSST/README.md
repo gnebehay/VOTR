@@ -1,4 +1,4 @@
-DSST: Discriminative Scale Space Tracker (DSST)
+DSST: Discriminative Scale Space Tracker
 -------------------------------------------------------------------------------
 
 DSST is part of the [Visual Object Tracking Repository](https://github.com/gnebehay/VOTR),
@@ -6,6 +6,12 @@ which aims at providing a central repository for state-of-the-art tracking algor
 The source code for this tracker was submitted for the [VOT2014 challenge](https://www.votchallenge.net).
 A minor adaption was made by using MATLAB's imresize() function
 instead of a custom mex file to increase portability.
+
+Dependencies:
+* Matlab
+* Image Processing Toolbox
+* Signal Processing Toolbox
+
 The following description was copied literally from the original author.
 
 ABSTRACT
