@@ -12,5 +12,6 @@ Currently, the following trackers are contained in this repository:
 * [HoughTrack](https://www.github.com/gnebehay/HoughTrack)
 * [LearnMatch](https://www.github.com/gnebehay/LearnMatch)
 * [SCM](https://www.github.com/gnebehay/SCM)
+* [SIR-PF](https://www.github.com/gnebehay/SIR-PF)
 * [STRUCK](https://www.github.com/gnebehay/STRUCK)
 * [TLD](https://www.github.com/gnebehay/TLD)
