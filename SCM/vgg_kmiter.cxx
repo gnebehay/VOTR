@@ -42,7 +42,7 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
 	plhs[0] = mxCreateDoubleMatrix(dim, nclus, mxREAL);
 	CXp = mxGetPr(plhs[0]);
 
-	plhs[1] = mxCreateScalarDouble(0.0);
+	plhs[1] = mxCreateDoubleScalar(0.0);
 	psse = mxGetPr(plhs[1]);
 
 	X = mxGetPr(prhs[0]);
