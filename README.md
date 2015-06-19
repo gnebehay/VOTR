@@ -6,6 +6,7 @@ to make automated comparison of tracker results more easy.
 
 Currently, the following trackers are contained in this repository:
 
+* [CppMT](https://www.github.com/gnebehay/CppMT)
 * [CT](https://www.github.com/gnebehay/CT)
 * [DSST](https://www.github.com/gnebehay/DSST)
 * [FragTrack](https://www.github.com/gnebehay/FragTrack)
