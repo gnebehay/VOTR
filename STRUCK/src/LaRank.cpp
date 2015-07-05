@@ -34,7 +34,7 @@
 #include "Rect.h"
 #include "GraphUtils/GraphUtils.h"
 
-#include <Eigen/Array>
+#include <Eigen/Core>
 
 #include <opencv/highgui.h>
 static const int kTileSize = 30;
