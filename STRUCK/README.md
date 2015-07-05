@@ -5,7 +5,7 @@ STRUCK is part of the [Visual Object Tracking Repository](https://github.com/gne
 which aims at providing a central repository for state-of-the-art tracking algorithms that are freely available.
 The source code for this tracker was obtained from its [project website](http://www.samhare.net/research/struck/code)
 and extended by a challenge mode.
-Additionally, the code was updated to use Eigen3.
+Additionally, the code was updated to use Eigen3 and to support OpenCV 3.
 The following description was copied literally from the original author.
 
 README
