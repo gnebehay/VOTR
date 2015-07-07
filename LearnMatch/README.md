@@ -1,5 +1,4 @@
 LearnMatch: Structured Output Learning for Keypoint-Based Tracking
-
 -------------------------------------------------------------------------------
 
 LeranMatch is part of the [Visual Object Tracking Repository](https://github.com/gnebehay/VOTR),
