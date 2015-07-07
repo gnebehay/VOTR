@@ -1,7 +1,7 @@
 LearnMatch: Structured Output Tracking with Kernels
 -------------------------------------------------------------------------------
 
-STRUCK is part of the [Visual Object Tracking Repository](https://github.com/gnebehay/VOTR),
+LeranMatch is part of the [Visual Object Tracking Repository](https://github.com/gnebehay/VOTR),
 which aims at providing a central repository for state-of-the-art tracking algorithms that are freely available.
 The source code for this tracker was obtained from its
 [project website](http://www.samhare.net/research/keypoints/code)
