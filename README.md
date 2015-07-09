@@ -17,3 +17,12 @@ Currently, the following trackers are contained in this repository:
 * [STRUCK](https://www.github.com/gnebehay/STRUCK)
 * [TLD](https://www.github.com/gnebehay/TLD)
 * [qwsEDFT](https://www.github.com/gnebehay/qwsEDFT)
+
+The calling convention follows the file protocol of the [VOT challenge](http://www.votchallenge.net).
+In this calling convention, the tracker can expected to find the files images.txt and region.txt
+that contain the individual image file names and the initialization region respectively.
+After tracking, the file output.txt is written by the tracker into the folder.
+The python files in this repository can be used to run a tracker on a given sequence.
+It is necessary to copy the file .cv-example to your home folder ~/.cv and adapt the contents accordingly
+for these scripts to work.
+A suitable dataset can be found [here](http://www.gnebehay.com/cmt/). 
