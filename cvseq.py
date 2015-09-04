@@ -3,14 +3,15 @@ import numpy as np
 import os
 import cv2
 
-def load_sequences():
+def load_sequences(top_dir = None):
 
-    #Load root dir entry from file
-    seq_file = os.path.join(os.path.expanduser("~"), '.cv', 'dataset')
+    if top_dir is None:
+        #Load root dir entry from file
+        seq_file = os.path.join(os.path.expanduser("~"), '.cv', 'dataset')
 
-    with open(seq_file) as f:
-        seq_json = json.load(f)
-        top_dir = seq_json['root_dir']
+        with open(seq_file) as f:
+            seq_json = json.load(f)
+            top_dir = seq_json['root_dir']
 
     print('Listing sequences in directory ' + top_dir)
 
@@ -119,5 +120,3 @@ class Sequence:
 
             if gt_len != self.num_frames:
                 raise Exception('Number of entries in groundtruth file differs from number of frames in sequence ' + self.identifier + '.')
-
-
