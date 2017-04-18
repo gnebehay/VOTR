@@ -1,4 +1,4 @@
-#Visual Object Tracking Repository
+# Visual Object Tracking Repository
 
 This repository aims at collecting state-of-the-art tracking algorithms that are freely available.
 In addition, each tracker that is listed here was adapted as to implement a simple standard calling convention
