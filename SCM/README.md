@@ -1,4 +1,4 @@
-#SCM: Tracking via Sparsity-based Collaborative Model
+# SCM: Tracking via Sparsity-based Collaborative Model
 
 SCM is part of the [Visual Object Tracking Repository](https://github.com/gnebehay/VOTR),
 which aims at providing a central repository for state-of-the-art tracking algorithms that are freely available.
@@ -6,7 +6,7 @@ The source code for this tracker was obtained from its [project site](http://fac
 and extended by a challenge mode.
 The following description was copied literally from the original author.
 
-#Readme
+# Readme
 
 This code is a MATLAB implementation of the tracking algorithm described in CVPR 2012 paper 
         "Robust Object Tracking via Sparsity-based Collaborative Model" 
