@@ -186,7 +186,14 @@ def evaluate(name, selection_file, sequence_file, outcome_dir, output_dir):
     trackers = cvtrack.load_selection(selection_file)
     seqs = cvseq.load_selection(sequence_file)
 
+    if not os.path.isdir(output_dir):
+        os.mkdir(output_dir)
     output_dir = os.path.join(output_dir, 'plot')
+    if not os.path.isdir(output_dir):
+        os.mkdir(output_dir)
+
+    if not os.path.isdir(outcome_dir):
+        os.mkdir(outcome_dir)
 
     m = len(trackers)
     n = len(seqs)
