@@ -34,6 +34,7 @@
 class Kernel
 {
 public:
+	virtual ~Kernel() = default;
 	virtual double Eval(const Eigen::VectorXd& x1, const Eigen::VectorXd& x2) const = 0;
 	virtual double Eval(const Eigen::VectorXd& x) const = 0;
 };
