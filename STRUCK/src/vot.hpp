@@ -60,9 +60,7 @@ public:
 		std::getline (p_images_stream, line);
 		img = cv::imread(line, CV_LOAD_IMAGE_COLOR);
 
-		printf("Processing");
-		printf(line.c_str());
-		printf("\n");
+		std::cout << "Processing " << line << std::endl;
 		
 		return 1;
 	}

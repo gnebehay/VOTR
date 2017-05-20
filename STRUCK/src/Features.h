@@ -37,6 +37,7 @@ class Features
 {
 public:
 	Features();
+	virtual ~Features() = default;
 		
 	inline const Eigen::VectorXd& Eval(const Sample& s) const
 	{
